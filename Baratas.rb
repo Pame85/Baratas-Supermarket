@@ -4,27 +4,32 @@
 puts "Welcome to Baratas Mall ! Please Enter Your Name."
 name = gets
 puts "Hi #{name}" 
-items = [{shampoo: 19.19, tooth paste: 5.17, tooth brush: 3.99, body shower: 6.89}]
-puts "Items Listing: #{items}"
+items = "[shampoo: $ 19.19, tooth paste: $ 5.17, tooth brush: $ 3.99, body shower: $ 6.89]"
+puts "Today Items Listing: #{items}"
 
-def purchase_items (items)
-  purchased_items = input
-  input = get_input.split(',').map(&:strip)
-end 
+puts "This is sum calculation up to 5 numbers"
+puts "Enter the first number:"
+num1 = gets.to_i
 
-def get_input
-  puts "Please enter all the items purchased separated by a comma"
-  response = gets.chomp
+puts "Enter the second number:"
+num2 = gets.to_i
+
+num3 = gets.to_i
+
+puts "Enter the second number:"
+num4 = gets.to_i
+
+puts "Enter the second number:"
+num5 = gets.to_i
+
+def total_everyhting(numbers)
+  numbers.sum
 end
 
-def calculate_bill(quantity)
-  quantity.map do |items|
-  items = Item.all[items]
-  quantity[items] * items
-  puts "#{items.ljust(10)}"
+def total_sum(numbers)
+  numbers.inject{|sum, x| sum + x}
 end
 
-
-    Items_listing = [{shampoo: 19.19, tooth paste: 5.17, tooth brush: 3.99, body shower: 6.89}]
-    quantity_map(Items_to_reverse)
-    reverse_map(array_to_quantity)
+sum = 0
+workingArray.each {|num| sum += num}
+puts "Your sum is #{sum}"
